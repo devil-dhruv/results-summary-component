@@ -1,0 +1,214 @@
+:root {
+    --primary-one: hsl(0, 100%, 67%);
+    --primary-two: hsl(39, 100%, 56%);
+    --primary-three: hsl(166, 100%, 37%);
+    --primary-four:  hsl(234, 85%, 45%);
+    --primary-one-bg: hsla(0, 100%, 67%, 0.05);
+    --primary-two-bg: hsla(39, 100%, 56%, 0.05);
+    --primary-three-bg: hsla(166, 100%, 37%, 0.05);
+    --primary-four-bg:  hsl(234, 85%, 45%, 0.05);
+    --gradient-one: hsl(252, 100%, 67%);
+    --gradient-two:  hsl(241, 81%, 54%);
+    --gradient-three: hsla(256, 72%, 46%, 1);
+    --gradient-four:  hsla(241, 72%, 46%, 0);
+    --neutral-one:  hsl(221, 100%, 96%);
+    --neutral-two:  hsl(241, 100%, 89%);
+    --neutral-three:  hsl(224, 30%, 27%);
+    --neutral-three-full:  hsla(224, 30%, 27%, 0.5);
+    --neutral-two-full:  hsla(241, 100%, 89%, 0.5);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk';
+}
+body {
+    background-color: var(--neutral-one);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score-card {
+    background-image: linear-gradient(180deg, var(--gradient-one), var(--gradient-two));
+    color: var(--neutral-two);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    width: 18rem;
+    text-align: center;
+    font-weight: 400;
+    z-index: 1000;
+    padding-bottom: 3rem;
+    height: 25rem
+}
+.marks {
+    background-image: linear-gradient(180deg, var(--gradient-three), var(--gradient-four));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    box-sizing: content-box;
+
+}
+
+
+.marks, .remark {
+    color:#FFFFFF;
+} 
+
+.marks76 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+.remark {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.of-100 {
+color: var(--neutral-two-full);
+font-weight: 600;
+margin: 0;
+}
+.summary-card {
+    background-color: #FFFFFF;
+    width: 18rem;
+    padding: 2rem 2rem 2rem 4rem;
+    margin-left: -2rem;
+    border-radius: 1rem;
+    z-index: 100;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+  width: 20rem;
+}
+.reaction {
+    background-color: var(--primary-one-bg);
+    color: var(--primary-one);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.memory {
+    background-color: var(--primary-two-bg);
+    color: var(--primary-two);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.verbal {
+    background-color: var(--primary-three-bg);
+    color: var(--primary-three);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visual {
+    background-color: var(--primary-four-bg);
+    color: var(--primary-four);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subject-marks, .summary-title {
+    color: var(--neutral-three);
+    font-weight: 600;
+}
+.out-of-marks {
+    color: var(--neutral-three-full);
+
+}
+.subjects img, .subjects div {
+    vertical-align: middle;
+}
+.subjects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    gap: 0.6rem;
+    width: 100%;
+}
+.memory, .reaction, .visual, .verbal {
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.subject-marks {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--neutral-three);
+}
+.summary-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.logo-div, .subject-name {
+    padding: 0;
+    margin: 0;
+}
+button {
+    background-color: var(--neutral-three);
+    color: white;
+    border: none;
+padding: 0.8rem;
+width: 100%;
+border-radius: 3rem;
+font-weight: 600;
+font-size: 0.9rem;
+cursor: pointer;
+transition: background-image 4s linear;
+}
+.score-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.progress {
+    font-size: 1rem;
+}
+button:hover {
+    background-image: linear-gradient(180deg, var(--gradient-one), var(--gradient-two));
+}
+@media (max-width: 750px)
+{
+  
+    main {
+        flex-direction: column;
+        height: 100vh;
+
+        width: 100%;
+    }
+    .score-card {
+        width: 100%;
+        height: 100%;
+        padding-top: 4rem;
+        
+    }
+    .summary-card {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-top: -1rem;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Results Summary Component</title>
+</head>
+<body>
+    <main>
+        <section class="score-card">
+            <div class="score-title">Your Result</div>
+            <div class="marks"><span class="marks76">76</span><span class="of-100">of 100</span></div>
+            <div class="remark">Great</div>
+            <div class="progress">You scored higher than 65% of
+                the people who have taken
+                these tests.</div>
+        </section>
+        <section class="summary-card">
+            <div class="summary-title">Summary</div>
+            <div class="subjects">
+                <div class="reaction">
+                    <div class="subject-name">
+                        <img class="logo" src="images/icon-reaction.svg">
+                        Reaction
+                    </div>
+                    <div class="subject-marks">80<span class="out-of-marks"> / 100</span></div>
+                </div>
+                <div class="memory">
+                    <div class="subject-name">
+                        <img class="logo" src="images/icon-memory.svg">
+                        Memory
+                    </div>
+                    <div class="subject-marks">92<span class="out-of-marks"> / 100</span></div>
+                </div>
+                <div class="verbal">
+                    <div class="subject-name">
+                        <img class="logo" src="images/icon-verbal.svg">
+                        Verbal
+                    </div>
+                    <div class="subject-marks">61<span class="out-of-marks"> / 100</span></div>
+                </div>
+                <div class="visual">
+                    <div class="subject-name">
+                        <img class="logo" src="images/icon-visual.svg">
+                        Visual
+                    </div>
+                    <div class="subject-marks">73<span class="out-of-marks"> / 100</span></div>
+                </div>
+            </div>
+            <div><button>Continue</button></div>
+        </section>
+    </main>
+    <script src="data.json"></script>
+</body>
+</html>
